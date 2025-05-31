@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Análisis Facial";
+}
+
+<h2>Análisis Facial</h2>
+
+<p>Rostros detectados: @ViewBag.TotalFaces</p>
+
+@if (ViewBag.ImagePath != null)
+{
+    <img src="@ViewBag.ImagePath" alt="Resultado del análisis" style="max-width: 100%;">
+}

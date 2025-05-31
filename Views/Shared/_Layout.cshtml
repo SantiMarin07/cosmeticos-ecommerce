@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CosmeticosEcommerce</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css"/>
+    <link rel="stylesheet" href="~/CosmeticosEcommerce.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header id="Header">
+        <img src="/images/logo.jpg" alt="Logo" class="logo">
+        <!-- menu Header-->
+        <ul class="main-menu">
+            <li class="menu-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="menu-item"><a asp-controller="Producto" asp-action="Index">Productos</a></li>
+            <li class="menu-item">Contacto</li>
+            <li class="cta">
+                <a asp-controller="Account" asp-action="Register">Sign In</a>
+            </li>
+
+        </ul>
+    </header>
+
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>¡Bienvenida al mundo del cuidado de la piel!</h1>
+                <p>Descubre productos que realzan tu belleza natural y protegen tu piel cada día 🌸💧</p>
+                
+                <a href="#productos" class="btn-hero">Explorar productos</a>
+            </div>
+        </section>
+
+<div class="container min-vh-100">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <div class="footer-link">
+                    <h4>Campaña</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestro servicios</a></li>
+                        <li><a href="#">afiliate</a></li>
+                        <li><a href="#">politicas de privacidad</a></li>
+                    </ul>
+                </div>
+
+            <div class="footer-link">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Estatus de orden </a></li>
+                        <li><a href="#">Pagos</a></li>
+                    </ul>
+                </div>
+
+            <div class="footer-link">
+                    <h4>Sigenos</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

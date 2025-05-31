@@ -1,0 +1,78 @@
+@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<body>
+    <div class="container">
+    <div class="container-form">
+        <form class="sing-in">
+            <h2>Iniciar Sesión</h2>
+            <div class="Social-networks">
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </div>
+            <span>Use su correo y contraseña</span>
+            <div class="container-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="container-input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="Password">
+            </div>
+            <a href="#">¡Olvidé mi contraseña!</a>
+            <button class="button">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="container-form">
+        <form class="sing-up">
+            <h2>Registrarse</h2>
+            <div class="Social-networks">
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </div>
+            <span>Use su correo electrónico para registrarse</span>
+            <div class="container-input">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div class="container-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="container-input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="Password">
+            </div>
+            <button class="button">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="container-welcome">
+        <div class="wlcom-sing-up welcome">
+            <h3>¡Bienvenido!</h3>
+            <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+            <button class="button" id="btn-sing-up">Registrarse</button>
+        </div>
+        <div class="wlcom-sing-in welcome">
+            <h3>¡Hola!</h3>
+            <p>Regístrese con sus datos personales para usar todas las funciones del sitio</p>
+            <button class="button" id="btn-sing-in">Iniciar Sesión</button>
+        </div>
+    </div>
+</div>
+<script src="~/js/register.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

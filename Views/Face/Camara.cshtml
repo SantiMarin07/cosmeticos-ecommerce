@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Cámara en vivo";
+}
+
+<h2>Capturar Imagen</h2>
+<video id="video" width="320" height="240" autoplay></video>
+<button id="capture">Capturar</button>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<form id="uploadForm" method="post" asp-controller="Face" asp-action="AnalizarDesdeCamara">
+    <input type="hidden" name="imageData" id="imageData" />
+    <button type="submit">Enviar para análisis</button>
+</form>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const imageDataInput = document.getElementById('imageData');
+
+    navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+        video.srcObject = stream;
+    });
+
+    document.getElementById('capture').addEventListener('click', () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0);
+        imageDataInput.value = canvas.toDataURL('image/jpeg');
+    });
+</script>

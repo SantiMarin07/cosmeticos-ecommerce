@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Resultado del Análisis";
+}
+
+<h2>Resultado del Análisis</h2>
+
+<p>Rostros detectados: @ViewBag.TotalFaces</p>
+<p>Recomendación: <strong>@ViewBag.Sugerencia</strong></p>
+
+@if (ViewBag.ImagePath != null)
+{
+    <img src="@ViewBag.ImagePath" alt="Resultado del análisis" style="max-width: 100%;">
+}

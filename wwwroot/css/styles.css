@@ -1,0 +1,259 @@
+:root {
+  --main-color: #FDA6D6; /* rosa elegante */
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+a{
+  text-decoration: none;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* From Uiverse.io by Yaseen549 */ 
+.card {
+  width: 190px;
+  height: 120px;
+  transition: all .5s;
+  box-shadow: 15px 15px 30px #fafafa9f, -15px -15px 30px rgba(131, 131, 131, 0.562);
+  text-align: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  height: 260px;
+  background: linear-gradient(360deg, #edededc5 60%, rgb(190, 189, 189) 70%);
+}
+.card .plantilla{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  margin-bottom: 16px;
+}
+.card .plantilla .card-img{
+  width: 50px;
+}
+.card .plantilla .card-title{
+  font-size: 1em;
+  letter-spacing: .1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 4px 0 14px 0;
+  transition: all .5s;
+  color: #313131c5;
+}
+.card:hover .plantilla{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+.card:hover .card .plantilla .card-title{
+  padding: 0;
+}
+.card .card-description{
+  display: block;
+  text-align: left;
+  color: #212121;
+  margin: 0 18px;
+}
+
+.card .plantilla p{
+  transition: all .5s;
+  font-size: .8em;
+  margin-bottom: 8px;
+}
+.card .plantilla a{
+  color: #323532;
+  cursor: pointer;
+  transition: all .5s;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+  
+  main {
+  margin-top: 120px; /* Ajuste por el header fijo */
+}
+
+.box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.box-container .box{
+  height: 11rem;
+  width: 17rem;
+  background: #ffb6c1;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 .3 5rem rgba(226, 41, 195, 0.5);
+  margin: 2rem;
+}
+
+.box-container .box i{
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #9c27b0;
+  font-size: 2rem;
+  margin: 1rem 0;
+
+}
+
+.box-container .box h3{
+  font-size: 20px;
+  color: #9c27b0;
+}
+.box-container .box p{
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+/* container-menu */
+.containe-men{
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.h2-sub {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: #3bcc75;
+    font-weight: 600;
+    line-height: .4;
+}
+
+.btn-{
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+
+.cta-btn{
+  font-size: 1.1rem;
+  background-color: #ffc845;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  border-radius: 4rem;
+}
+
+.cta-btn:hover,
+.cta-btn:focus{
+  color: #fff;
+  background-color: #3bcc75;
+}
+
+.bt- {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+
+.global{
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+.circle {
+    font-size: 1.5rem;
+    color: #3bcc75;
+    margin: 0 1.6rem;
+}
+
+.global .circle{
+  color: #3bcc75;
+  margin: 2.4rem 0;
+}
+
+.hea-dark{
+  color: #252525;
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.global .h2-sub{
+  letter-spacing: -1px;
+  line-height: .42;
+}
+.res-info{
+  text-align: center;
+}
+
+.res-des{
+  margin-bottom: 3rem;
+}
+
+.res-des p{
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.image-group img{
+    width: 100%;
+    max-width: 100%;
+}
+.image-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.disco .res-des{
+  padding-top: 3rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 900px) {
+  section{
+    padding: 7.9rem
+  }
+  
+  .menu-toggle{
+    display: none;
+  }
+    .h2-sub {
+        font-size: 3rem;
+    }
+    .res-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .res-info > div {
+        flex: 1;
+    }
+    .pad-rig {
+        padding-right: 7rem;
+    }
+}
