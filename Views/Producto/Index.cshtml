@@ -12,6 +12,7 @@
                     <h2 class="card-title">@producto.Nombre</h2>
                     <p class="card-price">Precio: $@producto.Precio</p>
                     <p class="card-description">@producto.Descripcion</p>
+                    <a asp-controller="Carrito" asp-action="Agregar" asp-route-id="@producto.Id" class="cta-btn">Agregar al carrito</a>
                 </div>
             </div>
     }

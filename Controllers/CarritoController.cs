@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using CosmeticosEcommerce.Models; // ← MUY IMPORTANTE
-
+using CosmeticosEcommerce.Models;
 
 public class CarritoController : Controller
 {
-    private static List<Producto> carrito = new List<Producto>();
+    // Carrito en memoria (se reinicia al reiniciar la aplicación).
+    private static readonly List<Producto> carrito = new();
 
     public IActionResult Index()
     {
@@ -15,8 +15,8 @@ public class CarritoController : Controller
 
     public IActionResult Agregar(int id)
     {
-        var producto = new Producto { Id = id, Nombre = "Producto Ejemplo", Precio = 20.99m, ImagenUrl = "base.jpg",Descripcion = "Descripcion del producto" };
-        carrito.Add(producto);
+        var producto = ProductoController.Catalogo.FirstOrDefault(p => p.Id == id);
+        if (producto != null) carrito.Add(producto);
         return RedirectToAction("Index");
     }
 

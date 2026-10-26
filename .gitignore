@@ -1,0 +1,19 @@
+# Compilación de .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+
+# Configuración local con contraseñas
+appsettings.Local.json
+
+# Imágenes temporales del análisis facial
+wwwroot/images/temp.jpg
+wwwroot/images/resultado.jpg
+
+# Sistema
+.DS_Store
+Thumbs.db
